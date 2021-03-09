@@ -56,6 +56,15 @@ class ViewContributionPage extends Component {
 
         return (
             <div>
+                <div className="banner">
+                    <div className="banner__content">
+                        <div className="banner-content__logo">
+                            <img src="https://i.imgur.com/IiQ4Qjx.png" alt="Logo" className="img-fluid"/>
+                        </div>
+                        <h2>University of Greenwich</h2>
+                        <h4>Contribution Showcase</h4>
+                    </div>
+                </div>
                 <main>
                     <div className="container">
                         <div className="search-engine">

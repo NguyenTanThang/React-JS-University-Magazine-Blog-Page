@@ -11,40 +11,42 @@ class DetailsContribution extends Component {
         const {title, docFileURL, imageFileURL, contributor, created_date, last_modified_date} = contributionItem;
 
         return (
-            <div className="details-page">
-                <div className="page-header">
-                    <PageHeader
-                        className="site-page-header"
-                        onBack={() => {
-                            this.props.history.push("/")
-                        }}
-                        title={title}
-                        subTitle={`By ${contributor.username}`}
-                    />
-                </div>
-                <div className="details-page__container">
-                    <div className="details-page-container__review">
-                        <FileReviewer file={`${docFileURL}`} extension={get_url_extension(docFileURL)}/>
+            <>
+                <div className="details-page">
+                    <div className="page-header">
+                        <PageHeader
+                            className="site-page-header"
+                            onBack={() => {
+                                this.props.history.push("/")
+                            }}
+                            title={title}
+                            subTitle={`By ${contributor.username}`}
+                        />
                     </div>
-                    <div className="details-page-container__info">
-                        <div className="info-item">
-                            <h4>Cover Image</h4>
-                            <img src={imageFileURL} alt="Cover" className="img-fluid"/>
+                    <div className="details-page__container">
+                        <div className="details-page-container__review">
+                            <FileReviewer file={`${docFileURL}`} extension={get_url_extension(docFileURL)}/>
                         </div>
-                        <div className="info-item">
-                            <h4>Date</h4>
-                            <ul>
-                                <li>
-                                    <p><b>Created:</b> {parseDateMoment(created_date)}</p>
-                                </li>
-                                <li>
-                                    <p><b>Modified:</b> {parseDateMoment(last_modified_date)}</p>
-                                </li>
-                            </ul>
+                        <div className="details-page-container__info">
+                            <div className="info-item">
+                                <h4>Cover Image</h4>
+                                <img src={imageFileURL} alt="Cover" className="img-fluid"/>
+                            </div>
+                            <div className="info-item">
+                                <h4>Date</h4>
+                                <ul>
+                                    <li>
+                                        <p><b>Created:</b> {parseDateMoment(created_date)}</p>
+                                    </li>
+                                    <li>
+                                        <p><b>Modified:</b> {parseDateMoment(last_modified_date)}</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </>
         )
     }
 }

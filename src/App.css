@@ -7,6 +7,54 @@ main {
   padding-bottom: 50px;
 }
 
+/*Banner*/
+.banner {
+  height: 70vh;
+  background-image: url("https://i.imgur.com/Dkvu1P2.png");
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.banner::after {
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+}
+
+.banner__content {
+  position: relative;
+  z-index: 3;
+}
+
+.banner__content h2 {
+  font-size: 3rem;
+  color: #FFF;
+}
+
+.banner__content h4 {
+  color: #FFF;
+}
+
+.banner-content__logo img {
+  width: 400px;
+}
+
+/*Navbar*/
+.navbar-brand {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .search-engine {
   margin-bottom: 50px;
 }
